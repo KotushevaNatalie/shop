@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-      <link rel = 'stylesheet' href='autorization.css'> 
+      <link rel = 'stylesheet' href='catalog.css'>
        <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
@@ -8,11 +8,8 @@
     
   </head>
   <body bgcolor="#7fc7ff">
-
-
       
       <div class='header'>
-        
           <div class='container'>
              <div class='header-line'>
              <img  src="logo.png" width="70" height="70">
@@ -64,50 +61,49 @@
                         if( $current_page )	
                             echo $name;
 
-                    ?></a><a class="nav-item" href="<?php	
+                    ?></a>
 
-                    $name='Контакты';
-                    $link='contact.php';	
-                    $current_page=true;	
-
-                    echo $link;	
-
-                ?>"><?php	
-
-                    if( $current_page )	
-                        echo $name;
-
-                ?></a>
-                
                      
+                     <a class="nav-item" href="<?php	
 
-                 </div>
+                        $name='Контакты';
+                        $link='contact.php';	
+                        $current_page=true;	
+
+                        echo $link;	
+
+                    ?>"><?php	
+
+                        if( $current_page )	
+                            echo $name;
+
+                    ?></a>                
                  
              </div>
       
          </div>
          
-        
-         <main>
-         <div class='head'>                 
-            <form> 
-            <p class='condition'><b>Авторизация</b></p>
-        
-            <p class='condition'>Логин <input type="text" size="40"></p>
-            <p class='condition'>Пароль <input type="password" size="40"></p>           
+        <main>
 
-                <p><input class='condition' id="check" type="checkbox">
-                <label class='condition' for="check">Запомнить меня</label></p>
-                    
-                <p><input class='condition' type="submit" value="Войти"></p>
-    
-                
-            </form>
-        </div>
-             
-     </main>
+        <div class="header-down">
+         
+        <?php 
+        require('database.php');
+        $id = $_GET['id'];
+
+        $sql = mysqli_query($conn, "SELECT * FROM `shop` WHERE `id`=".$id);
+        while ($result = mysqli_fetch_array($sql)) {
+            echo '<h1>'.$result['Название'].'</h1><br>'.'<img src="'.$result['img'].'" width="350" height="500"><br>'.'<h2>Описание: '
+            .$result['Описание товара'].'</h2><br><h3>Цена: '.$result['Цена'].'</h3><br><h4>Осталось в магазине: '.$result['Кол-во'].'</h4>';
+        }
         
-    
+        ?>
+    </div>
+</div>
+
+
+
+
     </body>
     
     <footer>
