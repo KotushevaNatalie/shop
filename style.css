@@ -1,0 +1,109 @@
+.body{
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    margin:0px 166px;
+}
+
+
+.header{
+    background-image:url(fbefd0.png);
+    height: 90px;
+    
+}
+
+.header-line{
+    position: relative;
+    top: 20px;
+    
+    display:flex;
+
+}
+
+.nav-item{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight:700;
+    font-size: 14px;
+    margin-right:25px;
+    position: relative;
+    top: 20px;
+}
+
+.condition{
+    position: relative; 
+    left: 200px;
+    top: 20px;
+    color:black;
+    
+
+    
+}
+
+.start{
+    background-image: url(1.png);
+    position: relative;
+    width: 1300px;
+    height: 300px;
+    top: 70px;
+    left: 20px;
+
+}
+
+.foot{
+    background-image:url(fbefd0.png);
+    position: relative;
+    top: 320px;
+    height: 30px;
+
+}
+
+.footer{
+    color:black;
+    position: relative; 
+   
+    left: 200px;
+    text-decoration: none;
+    font-weight:700;
+    font-size: 14px;
+    margin-right:25px;
+}
+
+.header-logo{
+    margin: 100px 166px;
+}
+
+
+
+.button{
+    
+    font-size: 13px;
+    font-weight: 800;
+    height: 20px;
+    color:rgb(2, 1, 1);
+    position: relative; 
+    top: 20px;
+    left: 1100px;
+    background-color:rgb(225, 200, 147);
+    border-radius: 6px;
+    border: 2px solid rgb(159, 151, 94);
+}
+
+
+.massive{
+    position: relative;
+    left: 500px;
+    top: 150px;
+
+}
+
+.photo{
+    position: absolute;
+    left: 1110px;
+    top: 300px;
+    border-radius: 30%;
+}
+
+
