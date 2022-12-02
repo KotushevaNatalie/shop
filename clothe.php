@@ -93,13 +93,16 @@
 
         $sql = mysqli_query($conn, "SELECT * FROM `shop` WHERE `id`=".$id);
         while ($result = mysqli_fetch_array($sql)) {
-            echo '<h1>'.$result['Название'].'</h1><br>'.'<img src="'.$result['img'].'" width="350" height="500"><br>'.'<h2>Описание: '
+            echo '<h1>'.$result['Название'].'</h1><br>'.'<img src="'.$result['Товар'].'" width="350" height="500"><br>'.'<h2>Описание: '
             .$result['Описание товара'].'</h2><br><h3>Цена: '.$result['Цена'].'</h3><br><h4>Осталось в магазине: '.$result['Кол-во'].'</h4>';
         }
         
         ?>
     </div>
-</div>
+    </div>
+
+
+
 
 
 
