@@ -9,9 +9,9 @@
 
 
 .header{
-    background-image:url(fbefd0.png);
+    background-color: rgb(81, 170, 230);
     height: 90px;
-    
+
 }
 
 .header-line{
@@ -26,7 +26,7 @@
     color:rgb(0, 0, 0);
     text-decoration: none;
     font-weight:700;
-    font-size: 14px;
+    font-size: 18px;
     margin-right:25px;
     position: relative;
     top: 20px;
@@ -54,10 +54,10 @@
 }
 
 .foot{
-    background-image:url(fbefd0.png);
+    background-color: rgb(81, 170, 230);
     position: relative;
-    top: 320px;
-    height: 30px;
+    top: 240px;
+    height: 50px;
 
 }
 
@@ -109,5 +109,5 @@
 
 .table{
     position: relative;
-    top: 30px;
+    top: 80px;
 }

@@ -7,77 +7,78 @@
 
     
   </head>
-  <body bgcolor="#7fc7ff">
+  <body bgcolor="#d8e1e7">
       
       <div class='header'>
           <div class='container'>
              <div class='header-line'>
-             <img  src="logo.png" width="70" height="70">
+             
             
                 
-                    <a class="button" href="<?php 
+             <a class="button" href="<?php 
 
-                        $name='Войти'; 
-                        $link='autorization.php'; 
-                        $current_page=true; 
+            $name='Войти'; 
+            $link='autorization.php'; 
+            $current_page=true; 
 
-                        echo $link; ?>">
-                        <?php 
+            echo $link; ?>">
+            <?php 
 
-                        if($current_page) 
-                            echo $name;?></a>
+            if($current_page) 
+                echo $name;?></a>
 
 
-                
-                 <div class='nav'>
-                    
-                    <!-- a class="nav-item" href="index.php">Главная</a -->
-                    <a class="nav-item" href="<?php	
 
-                        $name='Главная'; 
-                        $link='index.php';	
-                        $current_page=true;	
+            <div class='nav'>
 
-                        echo $link;	
+            <!-- a class="nav-item" href="index.php">Главная</a -->
+            <a class="nav-item" href="<?php	
 
-                    ?>"><?php	
+            $name='Главная'; 
+            $link='index.php';	
+            $current_page=true;	
 
-                        if( $current_page )	
-                            echo $name;
+            echo $link;	
 
-                    ?></a>
+            ?>"><?php	
 
-                    <!-- a class="nav-item" href="catalog.php">Каталог</a -->
-                    <a class="nav-item" href="<?php	
+            if( $current_page )	
+                echo $name;
 
-                        $name='Каталог';
-                        $link='catalog.php';	
-                        $current_page=true;	
+            ?></a>
 
-                        echo $link;	
+            <!-- a class="nav-item" href="catalog.php">Каталог</a -->
+            <a class="nav-item" href="<?php	
 
-                    ?>"><?php	
+            $name='Библиотека';
+            $link='catalog.php';	
+            $current_page=true;	
 
-                        if( $current_page )	
-                            echo $name;
+            echo $link;	
 
-                    ?></a>
+            ?>"><?php	
 
-                     
-                     <a class="nav-item" href="<?php	
+            if( $current_page )	
+                echo $name;
 
-                        $name='Контакты';
-                        $link='contact.php';	
-                        $current_page=true;	
+            ?></a><a class="nav-item" href="<?php	
 
-                        echo $link;	
+            $name='Контакты';
+            $link='contact.php';	
+            $current_page=true;	
 
-                    ?>"><?php	
+            echo $link;	
 
-                        if( $current_page )	
-                            echo $name;
+            ?>"><?php	
 
-                    ?></a>
+            if( $current_page )	
+            echo $name;
+
+            ?></a>
+
+
+
+            </div>
 
 
                      
@@ -91,13 +92,93 @@
          
         <main>
 
-        <p class="condition">
-            Каталог товаров
-        </p>
+    
 
-        <table border="4px" bordercolor = "black" bgcolor = "white" width = "500" align="center" class="table" id = "achieve">
+
+       
+
+        <body>
+
+        <form action="#">
+            <input type="text" id="elastic">
+            <input type="submit"  value="Poisk" class="submitFrom">
+        </form>
+
+        <div class = "col-lg-22">
+            <ul class="elastic">
+                <li>Lorem</li>
+                <li>dolor</li>
+                <li>sit</li>
+                <li>amet</li>
+                <li>consectetur</li>
+                <li>adipliscing</li>
+                <li>elit</li>
+                <li>do</li>
+                <li>elusmod</li>
+                <li>tempor</li>
+                <li>incididunt</li>
+                <li>labore</li>
+                
+               
+            </ul>
+        </div>
+
+        <a href="https://urait.ru/viewer/administrativno-pravovoe-regulirovanie-finansovo-ekonomicheskoy-deyatelnosti-509852#page/1">скачать файл</a>
+
+
+<div class="card">
+    <div class="card2">
+     <span>Black</span>   
+
+    </div>
+</div>
+<div class="card">
+    <div class="card2">
+        <span>Red</span>
+
+    </div>
+</div>
+<div class="card">
+    <div class="card2">
+        <span>White</span>
+
+    </div>
+</div>
+
+
+        <script type="text/javascript">
+            const elastic = document.querySelector('#elastic')
+
+            elastic.addEventListener('input', (ev) => {
+                const value = ev.target.value.trim()
+                const elasticItems = document.querySelectorAll('.card')
+                const searchRegExp = new RegExp(value, 'gi')
+
+                if (value === '') {
+                    elasticItems.forEach((el) => {
+                        el.classList.remove('hide')
+                    })
+                    return
+                }
+
+                elasticItems.forEach((el) => {
+                    const innerCard = el.querySelector('.card2')
+                    const elementText = innerCard.textContent
+                    const isContainsSearchRequest = searchRegExp.test(elementText)
+                    if (!isContainsSearchRequest) {
+                        el.classList.add('hide')
+                    } else {
+                        el.classList.remove('hide')
+                    }
+                })
+            })
+        </script>
+
+
+
+        <table border="4px" bordercolor = "black" bgcolor = "#d8e1e7" width = "1300" align="center" class="table" id = "achieve">
             <?php require "table.php"; ?>
-            </table>
+        </table>
         </main>
 
 

@@ -7,7 +7,7 @@
 
     
   </head>
-  <body bgcolor="#7fc7ff">
+  <body bgcolor = "#d8e1e7">
 
 
       
@@ -15,7 +15,7 @@
         
           <div class='container'>
              <div class='header-line'>
-             <img  src="logo.png" width="70" height="70">
+             
             
                 
                     <a class="button" href="<?php 
@@ -53,7 +53,7 @@
                     <!-- a class="nav-item" href="catalog.php">Каталог</a -->
                     <a class="nav-item" href="<?php	
 
-                        $name='Каталог';
+                        $name='Библиотека';
                         $link='catalog.php';	
                         $current_page=true;	
 
@@ -89,26 +89,35 @@
          
         <main>
             <div class="start">
+
                 <form>
+                
                     <big class='condition'>WoWBaby</big>
-                    <p class='condition'>WoWBaby - это интернет-магазин с огромным ассортиментом модной детской одежды от известных 
-                    <p class='condition'>и люксовых брендов. WowBaby был основан 2 декабря 2022 года, эта сеть магазин есть в
-                    <p class='condition'>таких городах как Москва, Санкт-Петербург, Новосибирск, Владивосток и многих других 
-                    <p class='condition'>городах России. Наш интернет магазин это впервую очередь знаменитые бренды, качествен-
-                    <p class='condition'>ная одежда, низкие цены. ЗДесь вы сможетет найти одежду для мальчиков и для девочек.
-                     
-                    <p class='condition'>У нас вы сможетет найти такеи наряды как:
-                    <li class='condition'>Повседневные</li>
-                    <li class='condition'>Школльные</li>
-                    <li class='condition'>Спортивные</li>
-                    <li class='condition'>А также наряды для самых маленьких</li>
+                    <p class='condition'>Название - портал, где содержатся рефераты и полные тексты научных статей и изданий.</p>
+                    <p class='condition'>Среди них также есть большое количество журналов, которые имеют открытый доступ. Наша</p>
+                    <p class='condition'>библиотека хранит литературу, с которой может ознакомиться каждый желающий.
+                    <p class='condition'>Чаще всего к ресурсу обращаются молодые ученые, научные сотрудники, студенты,
+                    <p class='condition'>аспиранты и преподаватели вузов. На портале много полезного для менеджеров, управлен-
+                    <p class='condition'>цев, медицинских работников, представителей наукоемких секторов бизнеса.</p>
+                    <p class='condition'>На сайте можно изучать:
+                    <li class='condition'>Журналы</li>
+                    <li class='condition'>Монографии</li>
+                    <li class='condition'>Сборники конференций</li>
+                    <li class='condition'>Диссертации и авторефераты</li>
+                    <li class='condition'>Патенты</li>
+
+                    <p class='condition'>Библиотека Название содержит огромное число научно-технических исследователь-
+                    <p class='condition'>ских работ с полностью или частично свободным доступом. Среди них можно найти публикации по любой теме, 
+                    <p class='condition'>которая будет касаться исследуемой вами проблемы.
+                    <p class='condition'>
+                      
                    
 
-                    <p class='condition'>Доставка осуществляется по всей России.   
-                
 
                 </form>
+                
             </div>
+            
         </main>
 
 

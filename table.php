@@ -1,9 +1,9 @@
 <?php
 include "database.php";
 
-$sql = mysqli_query($conn, 'SELECT * FROM `shop`');
+$sql = mysqli_query($conn, 'SELECT * FROM `literature`');
   while ($result = mysqli_fetch_array($sql)) {
-    echo '<tr>'.'<td>'.'<a href = "clothe.php?id='.$result['id'].'">'.'<img src="'.$result['Товар'].'">'.'</a>'.'</td>'.'<td>'. $result['Название'].'</td>'.'<td>' .$result['Описание товара'].'</td>'.'<td>'.$result['Цена'].'</td>'.'</tr>';
+    echo '<tr>'.'<td>'.'<a href = "clothe.php?id='.$result['id'].'">'.$result['name'].'">'.'</a>'.'</td>'.'<td>'. $result['year'].'</td>'.'<td>' .$result['description'].'</td>'.'<td>'.$result['author'].'</td>'.'<td>'.$result['type'].'</td>'.'</tr>';
   }
 
   

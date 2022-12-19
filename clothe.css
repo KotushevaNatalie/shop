@@ -1,7 +1,6 @@
 .body{
     margin:0;
     font-family: 'Montserrat', sans-serif;
-    background-image: url(21.jpg;)
 }
 
 .container{
@@ -34,34 +33,36 @@
 }
 
 .condition{
+    font-size: 20px;
     position: relative; 
     left: 200px;
     top: 20px;
-    color:rgb(4, 4, 4);
+    color:black;
+    
+
     
 }
 
-.start{
-    background-image: url(guys.png);
-    position: relative;
-    width: 1400px;
-    height: 400px;
-    top: 70px;
-    left: 25px;
-
+.header-down{
+    position:relative;
+    left: 50px;
+    top:100px;
 }
 
-.photo{
-    height: 550px;
-    width:600px;
+.start{
+    background-image: url(1.png);
     position: relative;
-    left: 10px;
+    width: 1300px;
+    height: 300px;
+    top: 70px;
+    left: 20px;
+
 }
 
 .foot{
     background-color: rgb(81, 170, 230);
     position: relative;
-    top: 240px;
+    top: 590px;
     height: 50px;
 
 }
@@ -112,4 +113,7 @@
     border-radius: 30%;
 }
 
-
+.table{
+    position: relative;
+    top: 40px;
+}

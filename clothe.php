@@ -1,83 +1,84 @@
 <head>
     <meta charset="UTF-8">
-      <link rel = 'stylesheet' href='catalog.css'>
+      <link rel = 'stylesheet' href='clothe.css'>
        <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
 
     
   </head>
-  <body bgcolor="#7fc7ff">
+  <body bgcolor="#d8e1e7">
       
       <div class='header'>
           <div class='container'>
              <div class='header-line'>
-             <img  src="logo.png" width="70" height="70">
+             
             
                 
-                    <a class="button" href="<?php 
+             <a class="button" href="<?php 
 
-                        $name='Войти'; 
-                        $link='autorization.php'; 
-                        $current_page=true; 
+                $name='Войти'; 
+                $link='autorization.php'; 
+                $current_page=true; 
 
-                        echo $link; ?>">
-                        <?php 
+                echo $link; ?>">
+                <?php 
 
-                        if($current_page) 
-                            echo $name;?></a>
+                if($current_page) 
+                    echo $name;?></a>
 
 
-                
-                 <div class='nav'>
-                    
-                    <!-- a class="nav-item" href="index.php">Главная</a -->
-                    <a class="nav-item" href="<?php	
 
-                        $name='Главная'; 
-                        $link='index.php';	
-                        $current_page=true;	
+                <div class='nav'>
 
-                        echo $link;	
+                <!-- a class="nav-item" href="index.php">Главная</a -->
+                <a class="nav-item" href="<?php	
 
-                    ?>"><?php	
+                $name='Главная'; 
+                $link='index.php';	
+                $current_page=true;	
 
-                        if( $current_page )	
-                            echo $name;
+                echo $link;	
 
-                    ?></a>
+                ?>"><?php	
 
-                    <!-- a class="nav-item" href="catalog.php">Каталог</a -->
-                    <a class="nav-item" href="<?php	
+                if( $current_page )	
+                    echo $name;
 
-                        $name='Каталог';
-                        $link='catalog.php';	
-                        $current_page=true;	
+                ?></a>
 
-                        echo $link;	
+                <!-- a class="nav-item" href="catalog.php">Каталог</a -->
+                <a class="nav-item" href="<?php	
 
-                    ?>"><?php	
+                $name='Библиотека';
+                $link='catalog.php';	
+                $current_page=true;	
 
-                        if( $current_page )	
-                            echo $name;
+                echo $link;	
 
-                    ?></a>
+                ?>"><?php	
 
-                     
-                     <a class="nav-item" href="<?php	
+                if( $current_page )	
+                    echo $name;
 
-                        $name='Контакты';
-                        $link='contact.php';	
-                        $current_page=true;	
+                ?></a><a class="nav-item" href="<?php	
 
-                        echo $link;	
+                $name='Контакты';
+                $link='contact.php';	
+                $current_page=true;	
 
-                    ?>"><?php	
+                echo $link;	
 
-                        if( $current_page )	
-                            echo $name;
+                ?>"><?php	
 
-                    ?></a>                
+                if( $current_page )	
+                echo $name;
+
+                ?></a>
+
+
+
+                </div>             
                  
              </div>
       
@@ -87,17 +88,23 @@
 
         <div class="header-down">
          
-        <?php 
-        require('database.php');
-        $id = $_GET['id'];
+            <?php 
+            require('database.php');
+            $id = $_GET['id'];
 
-        $sql = mysqli_query($conn, "SELECT * FROM `shop` WHERE `id`=".$id);
-        while ($result = mysqli_fetch_array($sql)) {
-            echo '<h1>'.$result['Название'].'</h1><br>'.'<img src="'.$result['Товар'].'" width="350" height="500"><br>'.'<h2>Описание: '
-            .$result['Описание товара'].'</h2><br><h3>Цена: '.$result['Цена'].'</h3><br><h4>Осталось в магазине: '.$result['Кол-во'].'</h4>';
-        }
-        
-        ?>
+            $sql = mysqli_query($conn, "SELECT * FROM `literature` WHERE `id`=".$id);
+            while ($result = mysqli_fetch_array($sql)) {
+                echo '<h1>'.$result['name'].'</h1>'.
+                '<h2><br>'.$result['author'].
+                '</h2><h3><br>Год: '.$result['year'].
+                '</h3><br><h4> '.$result['type'].
+                '</h4><br><h5>Описание: '.$result['description'].'</h5>'.
+                '<a href="'.$result['link'].'">Ознакомиться</a>';
+            }
+            
+            ?>
+
+
     </div>
     </div>
 
